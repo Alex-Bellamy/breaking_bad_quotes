@@ -27,7 +27,7 @@ class App extends Component {
           <ul>
             {quotes.map((quote) => (
               <li key={quote.id}>
-                {quote.quote}<i>(id:{quote.quote_id}, author - {quote.author})</i>
+                {quote.quote}<i> (id:{quote.quote_id}, author - {quote.author})</i>
               </li>
             ))}
           </ul>
