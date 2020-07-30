@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 
 class App extends Component {
+  state = {
+    quotes: [],
+    Loaded: false,
+  };
 
   componentDidMount() {
     fetch("https://www.breakingbadapi.com/api/quotes")
@@ -17,4 +21,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default App;
