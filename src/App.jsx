@@ -17,7 +17,23 @@ class App extends Component {
       });
   }
   render() {
-    return <div></div>;
+    const { Loaded, quotes } = this.state;
+
+    if (!Loaded) {
+      return <div>Quotes loading!</div>;
+    } else {
+      return (
+        <div>
+          <ul>
+            {quotes.map((quote) => (
+              <li key={quote.id}>
+                {quote.quote}<i>(id:{quote.quote_id}, author - {quote.author})</i>
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
   }
 }
 
